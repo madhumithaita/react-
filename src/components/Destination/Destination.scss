@@ -1,0 +1,30 @@
+.destination{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+max-width:30rem;
+    &__name{
+ margin-top:1.375rem;
+font-size:2.28rem;
+font-weight:250;
+    }
+    &__img-wrapper{
+ width:30rem;
+ height:22.5rem;
+    }
+    &__img{
+height:100%;
+width:100%;
+object-fit: cover;
+    }
+    &__city{
+        margin-top:0.625rem;
+font-size:1.063rem;
+font-weight:600;
+    }
+    &__description{
+        margin-top:1.88rem;
+font-size:1.231rem;
+font-weight:300;
+    }
+}
