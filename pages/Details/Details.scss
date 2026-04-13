@@ -1,0 +1,124 @@
+.details-page {
+  background-color: var(--bg-white);
+}
+
+.details-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+
+.header-info {
+  padding: 2rem 5%;
+  z-index: 10;
+}
+
+.header-city-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.promo-box {
+  background-color: var(--primary-color);
+  padding: 2rem;
+  max-width: 43.75rem; /* 700px */
+  margin-bottom: 1rem;
+  color: var(--bg-white);
+  
+  .promo-text {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+.temp {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.header-image-wrapper {
+  width: 100%;
+  height: 25rem; /* 400px */
+  overflow: hidden;
+  margin-top: -12.5rem; /* pull image up behind text slightly */
+  margin-bottom: 2rem;
+  
+  @media (min-width: 64rem) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      margin-top: 0;
+      z-index: 1;
+  }
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details-content {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  
+  .description-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: var(--text-main);
+    text-align: justify;
+  }
+}
+
+.similar-destinations {
+  border-top: 0.0625rem solid var(--border-color);
+  
+  .similar-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .similar-subtitle {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+  }
+
+  .similar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 64rem) { /* 1024px */
+  .header-city-name, .promo-box .promo-text, .temp {
+    font-size: 1.75rem;
+  }
+  
+  .header-image-wrapper {
+    margin-top: 0;
+    height: 20rem;
+  }
+  
+  .similar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 48rem) { /* 768px */
+  .similar-grid {
+    grid-template-columns: 1fr;
+    max-width: 25rem;
+    margin: 0 auto;
+  }
+}
